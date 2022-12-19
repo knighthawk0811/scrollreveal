@@ -1,1 +1,112 @@
-<p>Silence</p>
+<script src="scrollreveal.js"></script>
+
+<script>
+    options = {
+        delay: 200,
+        interval: 200,
+        reset: true,
+        viewOffset: {
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+        }
+    }
+    ScrollReveal().reveal('.sreveal', options);
+    
+    options = {
+        desktop: false,
+        mobile: true,
+        delay: 200,
+        interval: 100,
+        reset: false,
+        viewOffset: {
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+        }
+    }
+    ScrollReveal().reveal('.sreveal-m', options);
+
+    options = {
+        desktop: true,
+        mobile: false,
+        delay: 200,
+        interval: 200,
+        reset: false,
+        viewOffset: {
+            top: 50,
+            right: 0,
+            bottom: 50,
+            left: 0,
+        }
+    }
+    ScrollReveal().reveal('.sreveal-fade', options);
+    
+    options_up = {
+        mobile: false,
+        delay: 200,
+        interval: 200,
+        reset: false,
+        distance: '300px',
+        origin: 'bottom',
+        viewOffset: {
+            top: 50,
+            right: 0,
+            bottom: 50,
+            left: 0,
+        }
+    }
+    ScrollReveal().reveal('.sreveal-up', options_up);
+    
+    options_down = {
+        mobile: false,
+        delay: 200,
+        interval: 200,
+        reset: false,
+        distance: '300px',
+        origin: 'top',
+        viewOffset: {
+            top: 50,
+            right: 0,
+            bottom: 50,
+            left: 0,
+        }
+    }
+    ScrollReveal().reveal('.sreveal-down', options_down);
+    
+    options_left = {
+        mobile: false,
+        delay: 200,
+        interval: 200,
+        reset: false,
+        distance: '300px',
+        origin: 'right',
+        viewOffset: {
+            top: 50,
+            right: 0,
+            bottom: 50,
+            left: 0,
+        }
+    }
+    ScrollReveal().reveal('.sreveal-left', options_left);
+    
+    options_right = {
+        mobile: false,
+        delay: 200,
+        interval: 200,
+        reset: false,
+        distance: '300px',
+        origin: 'left',
+        viewOffset: {
+            top: 50,
+            right: 0,
+            bottom: 50,
+            left: 0,
+        }
+    }
+    ScrollReveal().reveal('.sreveal-right', options_right);
+<script>
+  
+<p class="sreveal-up">Silence</p>

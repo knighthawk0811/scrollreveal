@@ -8,13 +8,19 @@
 
 <title>Scroll Reveal - Test Page</title>
     
+    <style>
+        p {
+            text-align:center;
+        }
+    </style>
+    
 <script src="scrollreveal.js"></script>
 
 </head>
 <body>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <p class="sreveal">Silence</p>
+    <p class="sreveal-left-multi">Reveal</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
@@ -27,7 +33,7 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <p class="sreveal">Silence</p>
+    <p class="sreveal-left-multi">Reveal</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
@@ -42,7 +48,7 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <p class="sreveal">Silence</p>
+    <p class="sreveal-left-multi">Reveal</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
@@ -57,7 +63,7 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <p class="sreveal">Silence</p>
+    <p class="sreveal-left-multi">Reveal</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
@@ -72,7 +78,7 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <p class="sreveal">Silence</p>
+    <p class="sreveal-left-multi">Reveal</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
@@ -87,7 +93,7 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <p class="sreveal">Silence</p>
+    <p class="sreveal-left-multi">Reveal</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
@@ -102,12 +108,27 @@
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
-    <p class="sreveal">Silence</p>
+    <p class="sreveal-left-multi">Reveal</p>
     <p>&nbsp;</p>
     <p>&nbsp;</p>
     
     
 <script>
+    //default
+    options = {
+        delay: 200,
+        interval: 200,
+        reset: false,
+        viewOffset: {
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+        }
+    }
+    ScrollReveal().reveal('.sreveal', options);
+    
+    //reveal every time you scroll past
     options = {
         delay: 200,
         interval: 200,
@@ -119,9 +140,10 @@
             left: 0,
         }
     }
-    ScrollReveal().reveal('.sreveal', options);
+    ScrollReveal().reveal('.sreveal-multi', options);
     
-    options = {
+    //mobile only
+    options_m = {
         desktop: false,
         mobile: true,
         delay: 200,
@@ -134,9 +156,24 @@
             left: 0,
         }
     }
-    ScrollReveal().reveal('.sreveal-m', options);
+    ScrollReveal().reveal('.sreveal-mobile', options_m);
+    options_m = {
+        desktop: false,
+        mobile: true,
+        delay: 200,
+        interval: 100,
+        reset: true,
+        viewOffset: {
+            top: 0,
+            right: 0,
+            bottom: 0,
+            left: 0,
+        }
+    }
+    ScrollReveal().reveal('.sreveal-mobile-multi', options_m);
 
-    options = {
+    //desktop only
+    options_d = {
         desktop: true,
         mobile: false,
         delay: 200,
@@ -149,8 +186,23 @@
             left: 0,
         }
     }
-    ScrollReveal().reveal('.sreveal-fade', options);
+    ScrollReveal().reveal('.sreveal-desktop', options_d);
+    options_d = {
+        desktop: true,
+        mobile: false,
+        delay: 200,
+        interval: 200,
+        reset: true,
+        viewOffset: {
+            top: 50,
+            right: 0,
+            bottom: 50,
+            left: 0,
+        }
+    }
+    ScrollReveal().reveal('.sreveal-desktop-multi', options_d);
     
+    //sliding up from the bottom
     options_up = {
         mobile: false,
         delay: 200,
@@ -166,7 +218,23 @@
         }
     }
     ScrollReveal().reveal('.sreveal-up', options_up);
+    options_up = {
+        mobile: false,
+        delay: 200,
+        interval: 200,
+        reset: true,
+        distance: '300px',
+        origin: 'bottom',
+        viewOffset: {
+            top: 50,
+            right: 0,
+            bottom: 50,
+            left: 0,
+        }
+    }
+    ScrollReveal().reveal('.sreveal-up-multi', options_up);
     
+    //sliding down from the top
     options_down = {
         mobile: false,
         delay: 200,
@@ -182,14 +250,13 @@
         }
     }
     ScrollReveal().reveal('.sreveal-down', options_down);
-    
-    options_left = {
+    options_down = {
         mobile: false,
         delay: 200,
         interval: 200,
-        reset: false,
+        reset: true,
         distance: '300px',
-        origin: 'right',
+        origin: 'top',
         viewOffset: {
             top: 50,
             right: 0,
@@ -197,9 +264,10 @@
             left: 0,
         }
     }
-    ScrollReveal().reveal('.sreveal-left', options_left);
+    ScrollReveal().reveal('.sreveal-down-multi', options_down);
     
-    options_right = {
+    //sliding in from the left
+    options_left = {
         mobile: false,
         delay: 200,
         interval: 200,
@@ -213,6 +281,53 @@
             left: 0,
         }
     }
+    ScrollReveal().reveal('.sreveal-left', options_left);
+    options_left = {
+        mobile: false,
+        delay: 200,
+        interval: 200,
+        reset: true,
+        distance: '300px',
+        origin: 'left',
+        viewOffset: {
+            top: 50,
+            right: 0,
+            bottom: 50,
+            left: 0,
+        }
+    }
+    ScrollReveal().reveal('.sreveal-left-multi', options_left);
+    
+    //sliding in from the right
+    options_right = {
+        mobile: false,
+        delay: 200,
+        interval: 200,
+        reset: false,
+        distance: '300px',
+        origin: 'right',
+        viewOffset: {
+            top: 50,
+            right: 0,
+            bottom: 50,
+            left: 0,
+        }
+    }
     ScrollReveal().reveal('.sreveal-right', options_right);
+    options_right = {
+        mobile: false,
+        delay: 200,
+        interval: 200,
+        reset: true,
+        distance: '300px',
+        origin: 'right',
+        viewOffset: {
+            top: 50,
+            right: 0,
+            bottom: 50,
+            left: 0,
+        }
+    }
+    ScrollReveal().reveal('.sreveal-right-multi', options_right);
 <script>
 </body>

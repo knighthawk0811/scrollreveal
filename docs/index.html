@@ -13,7 +13,7 @@
             min-height:200px;
             
             background-color: rgba(0,99,255,1);
-            border-radius: 999px;
+            border-radius: 2em;
         }
         .color-01 {
             background-color: rgba(0,99,255,1);
@@ -63,6 +63,18 @@
             <div class="col-3 color-07 sreveal-up-multi">&nbsp;</div>
             <div class="col-3 color-01 sreveal-down-multi">&nbsp;</div>
             <div class="col-3 color-02 sreveal-right-multi">&nbsp;</div>
+            <div class="col-3 color-03 sreveal-left-multi">&nbsp;</div>
+            <div class="col-3 color-04 sreveal-up-multi">&nbsp;</div>
+            <div class="col-3 color-05 sreveal-down-multi">&nbsp;</div>
+            <div class="col-3 color-06 sreveal-right-multi">&nbsp;</div>
+            <div class="col-3 color-07 sreveal-left-multi">&nbsp;</div>
+            <div class="col-3 color-01 sreveal-up-multi">&nbsp;</div>
+            <div class="col-3 color-02 sreveal-down-multi">&nbsp;</div>
+            <div class="col-3 color-03 sreveal-right-multi">&nbsp;</div>
+            <div class="col-3 color-04 sreveal-left-multi">&nbsp;</div>
+            <div class="col-3 color-05 sreveal-up-multi">&nbsp;</div>
+            <div class="col-3 color-06 sreveal-down-multi">&nbsp;</div>
+            <div class="col-3 color-07 sreveal-right-multi">&nbsp;</div>
         </div>        
     </div>
     
@@ -70,8 +82,8 @@
 <script>
     //default
     options = {
-        delay: 200,
-        interval: 200,
+        delay: 250,
+        interval: 250,
         reset: false,
         viewOffset: {
             top: 0,
@@ -84,8 +96,8 @@
     
     //reveal every time you scroll past
     options = {
-        delay: 200,
-        interval: 200,
+        delay: 250,
+        interval: 250,
         reset: true,
         viewOffset: {
             top: 0,
@@ -100,8 +112,8 @@
     options_m = {
         desktop: false,
         mobile: true,
-        delay: 200,
-        interval: 100,
+        delay: 250,
+        interval: 250,
         reset: false,
         viewOffset: {
             top: 0,
@@ -114,8 +126,8 @@
     options_m = {
         desktop: false,
         mobile: true,
-        delay: 200,
-        interval: 100,
+        delay: 250,
+        interval: 250,
         reset: true,
         viewOffset: {
             top: 0,
@@ -130,8 +142,8 @@
     options_d = {
         desktop: true,
         mobile: false,
-        delay: 200,
-        interval: 200,
+        delay: 250,
+        interval: 250,
         reset: false,
         viewOffset: {
             top: 50,
@@ -144,8 +156,8 @@
     options_d = {
         desktop: true,
         mobile: false,
-        delay: 200,
-        interval: 200,
+        delay: 250,
+        interval: 250,
         reset: true,
         viewOffset: {
             top: 50,
@@ -159,8 +171,8 @@
     //sliding up from the bottom
     options_up = {
         mobile: false,
-        delay: 200,
-        interval: 200,
+        delay: 250,
+        interval: 250,
         reset: false,
         distance: '300px',
         origin: 'bottom',
@@ -174,8 +186,8 @@
     ScrollReveal().reveal('.sreveal-up', options_up);
     options_up = {
         mobile: false,
-        delay: 200,
-        interval: 200,
+        delay: 250,
+        interval: 250,
         reset: true,
         distance: '300px',
         origin: 'bottom',
@@ -191,8 +203,8 @@
     //sliding down from the top
     options_down = {
         mobile: false,
-        delay: 200,
-        interval: 200,
+        delay: 250,
+        interval: 250,
         reset: false,
         distance: '300px',
         origin: 'top',
@@ -206,8 +218,8 @@
     ScrollReveal().reveal('.sreveal-down', options_down);
     options_down = {
         mobile: false,
-        delay: 200,
-        interval: 200,
+        delay: 250,
+        interval: 250,
         reset: true,
         distance: '300px',
         origin: 'top',
@@ -223,8 +235,8 @@
     //sliding in from the left
     options_left = {
         mobile: false,
-        delay: 200,
-        interval: 200,
+        delay: 250,
+        interval: 250,
         reset: false,
         distance: '300px',
         origin: 'left',
@@ -238,8 +250,8 @@
     ScrollReveal().reveal('.sreveal-left', options_left);
     options_left = {
         mobile: false,
-        delay: 200,
-        interval: 200,
+        delay: 250,
+        interval: 250,
         reset: true,
         distance: '300px',
         origin: 'left',
@@ -255,8 +267,8 @@
     //sliding in from the right
     options_right = {
         mobile: false,
-        delay: 200,
-        interval: 200,
+        delay: 250,
+        interval: 250,
         reset: false,
         distance: '300px',
         origin: 'right',
@@ -270,8 +282,8 @@
     ScrollReveal().reveal('.sreveal-right', options_right);
     options_right = {
         mobile: false,
-        delay: 200,
-        interval: 200,
+        delay: 250,
+        interval: 250,
         reset: true,
         distance: '300px',
         origin: 'right',
